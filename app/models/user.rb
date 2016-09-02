@@ -13,4 +13,15 @@ class User < ApplicationRecord
   length: { in: 8..72 }, 
   on: :create
 
+
+  validates :name, 
+  length: { in: 2..20 }, 
+  on: :create
+
+
+  #this will either return false, or the user info
+  def self.authenticate(params)
+    User.find_by_email(params[:email]).try(:authenticate, params[:password])
+  end
+
 end
