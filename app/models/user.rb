@@ -10,12 +10,12 @@ class User < ApplicationRecord
   #use password NOT password_digest
   #length takes a range
   validates :password, 
-  length: { in: 8..72 }, 
+  length: { in: 8..40 }, 
   on: :create
 
 
   validates :name, 
-  length: { in: 2..20 }, 
+  length: { in: 2..18 }, 
   on: :create
 
 

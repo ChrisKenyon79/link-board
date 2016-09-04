@@ -19,8 +19,8 @@ Rails.application.routes.draw do
   get 'logout' => 'sessions#destroy'
 
 
+  # post 'secret' => 'home#secret'
   get 'secret' => 'home#secret'
-
 
 
   # For details on the DSL available within this file, 
